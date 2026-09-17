@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Parth Shroff is a machine learning systems researcher working on efficient model architectures, diffusion language models, relational learning, and hardware-software co-design.">
+    <meta name="description" content="Parth Shroff is a machine learning systems researcher working on multimodal token compression, diffusion language models, distributed training, and hardware-software co-design.">
     <meta name="author" content="Parth Shroff">
     <meta name="theme-color" content="#f7f8f6">
 
     <meta property="og:title" content="Parth Shroff">
-    <meta property="og:description" content="Research in efficient machine learning systems, diffusion language models, relational learning, and computer architecture.">
+    <meta property="og:description" content="Research in efficient multimodal models, diffusion language models, distributed training, and computer architecture.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://parthshroff.github.io/">
     <meta property="og:image" content="https://parthshroff.github.io/images/parth-shroff-profile.jpg">
@@ -28,6 +28,7 @@
         "name": "Parth Shroff",
         "url": "https://parthshroff.github.io/",
         "image": "https://parthshroff.github.io/images/parth-shroff-profile.jpg",
+        "email": "mailto:pshroff@cs.stanford.edu",
         "alumniOf": [
           {"@type": "CollegeOrUniversity", "name": "Stanford University"},
           {"@type": "CollegeOrUniversity", "name": "The University of Texas at Austin"}
@@ -39,7 +40,9 @@
         ],
         "knowsAbout": [
           "Machine learning systems",
+          "Multimodal token compression",
           "Diffusion language models",
+          "Distributed training",
           "Relational deep learning",
           "Computer architecture",
           "Hardware-software co-design"
@@ -66,15 +69,18 @@
     <main id="main-content">
       <section class="intro" id="top" aria-labelledby="intro-title">
         <div class="intro-photo-wrap">
-          <img
-            class="intro-photo"
-            src="images/parth-shroff-profile.jpg"
-            alt="Portrait of Parth Shroff"
-            width="1086"
-            height="1448"
-            decoding="async"
-            fetchpriority="high"
-          >
+          <picture>
+            <source srcset="images/parth-shroff-profile.avif" type="image/avif">
+            <img
+              class="intro-photo"
+              src="images/parth-shroff-profile.jpg"
+              alt="Portrait of Parth Shroff"
+              width="600"
+              height="800"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </picture>
         </div>
 
         <div class="intro-copy">
@@ -85,15 +91,18 @@
             distributed execution, and hardware-software co-design.
           </p>
           <p class="intro-body">
-            I completed an M.S. in Electrical Engineering at Stanford University and
-            three bachelor's degrees at UT Austin. My recent research includes efficient
-            multimodal models with <a href="https://tambelab.stanford.edu/" target="_blank" rel="noreferrer">Thierry Tambe</a>,
-            relational foundation-model benchmarks with <a href="https://cs.stanford.edu/people/jure/" target="_blank" rel="noreferrer">Jure Leskovec</a>,
-            and efficient diffusion language models. I currently work at NVIDIA.
+            I completed an M.S. in Electrical and Computer Engineering at Stanford
+            University and three bachelor's degrees at UT Austin. My recent research
+            includes multimodal token compression with
+            <a href="https://tambelab.stanford.edu/" target="_blank" rel="noreferrer">Thierry Tambe</a>,
+            relational learning with
+            <a href="https://cs.stanford.edu/people/jure/" target="_blank" rel="noreferrer">Jure Leskovec</a>,
+            and architectures and distributed systems for diffusion language models. I
+            currently work at NVIDIA.
           </p>
 
           <nav class="profile-links" aria-label="Profile links">
-            <a href="mailto:pmshroff@stanford.edu">Email</a>
+            <a href="mailto:pshroff@cs.stanford.edu">Email</a>
             <a href="https://scholar.google.com/citations?user=zU3lUtAAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
             <a href="https://github.com/ParthShroff" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/parthshroff/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -131,40 +140,78 @@
         <div class="research-grid">
           <article class="research-item">
             <p class="research-number">A</p>
-            <h3>Efficient multimodal models</h3>
+            <h3>Multimodal token compression</h3>
             <p>
-              With the Tambe Lab, I studied visual-token redundancy in vision-language
-              models and evaluated selection, merging, and cluster-level aggregation methods
-              for reducing multimodal inference cost.
+              With the Tambe Lab and NVIDIA Research, I studied how redundant visual
+              tokens inflate vision-language model inference cost. Our CVPR 2025 eLVM
+              work systematically compares token selection, merging, and cluster-level
+              aggregation, showing that simple cluster aggregation can outperform prior
+              encoder-level and attention-based approaches.
             </p>
-            <p class="research-meta">Thierry Tambe &middot; Stanford &middot; NVIDIA Research</p>
+            <p>
+              I also explored Matryoshka-style variable-length CLIP embeddings and Visual
+              Attention Redistribution, achieving 50&ndash;75% embedding compression with
+              minimal accuracy loss across SQA-IMG, TextVQA, POPE, and MME.
+            </p>
+            <p class="research-meta">Thierry Tambe &middot; Tsachy Weissman &middot; NVIDIA Research</p>
           </article>
 
           <article class="research-item">
             <p class="research-number">B</p>
-            <h3>Relational foundation models</h3>
+            <h3>Relational learning at scale</h3>
             <p>
-              I contributed to RelBench v2, a large-scale benchmark and repository for
-              learning directly over interconnected relational tables, including new datasets,
-              autocomplete tasks, and unified evaluation infrastructure.
+              I contributed to RelBench v2, a benchmark and open-source repository for
+              learning directly over interconnected relational tables. I worked on dataset
+              integrations spanning TGB and TabArena sources, as well as unified loading and
+              evaluation infrastructure; RelBench v2 expands the benchmark to 11 databases
+              and 66 predictive tasks.
             </p>
-            <p class="research-meta">Jure Leskovec &middot; Stanford STAR</p>
+            <p class="research-meta">Jure Leskovec &middot; Carlos Guestrin &middot; Stanford</p>
           </article>
 
           <article class="research-item">
             <p class="research-number">C</p>
-            <h3>Diffusion language models</h3>
+            <h3>Block-parallel diffusion training</h3>
             <p>
-              I work on block diffusion architectures and systems for long-context language
-              modeling. Our hybrid design confines reverse Mamba computation to the active
-              denoising block, enabling exact reusable prefix caches without giving up local
-              bidirectional mixing.
+              I helped develop and validate Block Parallelism, a distributed training method
+              for long-context block diffusion models. It assigns independent target-block
+              losses to GPU ranks and fuses block and context parallelism so corrupted-block
+              state stays local while clean-prefix key/value state is sharded.
             </p>
-            <p class="research-meta">Model architecture &middot; Training systems &middot; Long context</p>
+            <p>
+              The system combines K/V-sharded attention, tiled cross-entropy, and DP-scoped
+              ZeRO-2. In 16-H200 profiles, BP+CP speedups grow with context length, reaching
+              1.19&times; on Nemotron 14B at 512K and 1.78&times; on DiffusionGemma 26B-A4B at 128K.
+            </p>
+            <p class="research-meta">Distributed training &middot; Long context &middot; Diffusion LLMs</p>
           </article>
 
           <article class="research-item">
             <p class="research-number">D</p>
+            <h3>Hybrid diffusion language models</h3>
+            <p>
+              I study Mamba-attention hybrids for block diffusion language modeling. Our
+              partial-bidirectional design restricts reverse Mamba computation to the active
+              denoising block, retaining local bidirectional mixing while making clean-prefix
+              states exactly reusable across denoising steps.
+            </p>
+            <p class="research-meta">Model architecture &middot; Prefix caching &middot; Long-context inference</p>
+          </article>
+
+          <article class="research-item">
+            <p class="research-number">E</p>
+            <h3>Efficient model memory systems</h3>
+            <p>
+              At AMD, I developed head-level low-precision K/V-cache compression for
+              open-source mixture-of-experts models, including GPT-OSS, Qwen, and DeepSeek.
+              At NVIDIA, I characterized GPU memory-management and cache behavior across
+              machine learning, graphics, and HPC workloads.
+            </p>
+            <p class="research-meta">Quantization &middot; K/V caches &middot; GPU architecture</p>
+          </article>
+
+          <article class="research-item">
+            <p class="research-number">F</p>
             <h3>Multilevel cache replacement</h3>
             <p>
               My UT Austin honors thesis, advised by Calvin Lin, studied coordinated cache
@@ -186,6 +233,18 @@
         </div>
 
         <div class="publication-list">
+          <article class="publication">
+            <div class="publication-year">2026</div>
+            <div class="publication-copy">
+              <h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>
+              <p class="authors">Pranshu Chaturvedi, Tarun Suresh, Hangoo Kang, <strong>Parth Shroff</strong>, Azalia Mirhoseini</p>
+              <p class="venue">Preprint</p>
+            </div>
+            <div class="publication-links">
+              <span>Preprint</span>
+            </div>
+          </article>
+
           <article class="publication">
             <div class="publication-year">2026</div>
             <div class="publication-copy">
@@ -259,7 +318,7 @@
           <p class="section-index">03</p>
           <div>
             <h2 id="background-title">Background</h2>
-            <p>Education, honors, and teaching.</p>
+            <p>Education, selected experience, and teaching.</p>
           </div>
         </div>
 
@@ -268,8 +327,9 @@
             <div class="timeline-date">2024&ndash;2026</div>
             <div>
               <h3>Stanford University</h3>
-              <p class="timeline-degree">M.S. in Electrical Engineering</p>
-              <p>Signal Processing and Optimization &middot; GPA: 4.0/4.0</p>
+              <p class="timeline-degree">M.S. in Electrical and Computer Engineering</p>
+              <p>AI and Software/Hardware Systems &middot; Research focus: Multimodal LLM inference &middot; GPA: 4.07/4.00</p>
+              <p>Advisors: Thierry Tambe, Mert Pilanci, and Tsachy Weissman</p>
             </div>
           </article>
 
@@ -279,6 +339,35 @@
               <h3>The University of Texas at Austin</h3>
               <p class="timeline-degree">B.S. Computer Science Honors &middot; B.S. Electrical and Computer Engineering &middot; B.S. Mathematics</p>
               <p>Turing Scholars &middot; Dean's Scholars &middot; University Honors &middot; CNS Distinction in Research</p>
+            </div>
+          </article>
+
+          <h3 class="timeline-heading">Selected experience</h3>
+
+          <article class="timeline-row">
+            <div class="timeline-date">Fall 2025</div>
+            <div>
+              <h3>AMD</h3>
+              <p class="timeline-degree">Deep Learning Quantization Research Engineer Intern</p>
+              <p>Head-level low-precision K/V-cache compression for open-source mixture-of-experts models in Quark.</p>
+            </div>
+          </article>
+
+          <article class="timeline-row">
+            <div class="timeline-date">2024&ndash;2025</div>
+            <div>
+              <h3>NVIDIA</h3>
+              <p class="timeline-degree">GPU Design Architecture Intern</p>
+              <p>GPU MMU, cache, and memory-subsystem design for AI training and inference, graphics, and HPC workloads.</p>
+            </div>
+          </article>
+
+          <article class="timeline-row">
+            <div class="timeline-date">Summer 2023</div>
+            <div>
+              <h3>Apple</h3>
+              <p class="timeline-degree">CPU Design Verification Intern</p>
+              <p>Generated load/store and memory-subsystem test sequences for ARM-based Apple SoCs.</p>
             </div>
           </article>
 
@@ -300,7 +389,7 @@
             I'm always interested in efficient model architectures, training and inference
             systems, and hardware-software co-design.
           </p>
-          <a class="contact-link" href="mailto:pmshroff@stanford.edu">pmshroff@stanford.edu</a>
+          <a class="contact-link" href="mailto:pshroff@cs.stanford.edu">pshroff@cs.stanford.edu</a>
         </div>
       </section>
     </main>

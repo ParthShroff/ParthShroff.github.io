@@ -188,6 +188,12 @@ h3 {
   background: var(--accent);
 }
 
+.intro-photo-wrap picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .intro-photo {
   width: 100%;
   height: 100%;
@@ -398,6 +404,16 @@ h3 {
 
 .timeline {
   border-top: 1px solid var(--ink);
+}
+
+.timeline-heading {
+  margin: 54px 0 0;
+  padding: 18px 0 12px;
+  border-bottom: 1px solid var(--line);
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .timeline-row {
