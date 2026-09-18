@@ -1,119 +1,388 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Parth Shroff is a machine learning systems researcher working on multimodal token compression, diffusion language models, distributed training, and hardware-software co-design.">
+    <meta name="author" content="Parth Shroff">
+    <meta name="theme-color" content="#f7f8f6">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css"> 
-    <script>
-      function showImg() {
-          document.getElementById("prof_img").style.display = "/images/IMG_1753.jpg";
+    <meta property="og:title" content="Parth Shroff">
+    <meta property="og:description" content="Research in efficient multimodal models, diffusion language models, distributed training, and computer architecture.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://parthshroff.github.io/">
+    <meta property="og:image" content="https://parthshroff.github.io/images/parth-shroff-profile.jpg">
+
+    <title>Parth Shroff</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2315201f'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white'%3EPS%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Parth Shroff",
+        "url": "https://parthshroff.github.io/",
+        "image": "https://parthshroff.github.io/images/parth-shroff-profile.jpg",
+        "email": "mailto:pshroff@cs.stanford.edu",
+        "alumniOf": [
+          {"@type": "CollegeOrUniversity", "name": "Stanford University"},
+          {"@type": "CollegeOrUniversity", "name": "The University of Texas at Austin"}
+        ],
+        "sameAs": [
+          "https://scholar.google.com/citations?user=zU3lUtAAAAAJ",
+          "https://github.com/ParthShroff",
+          "https://www.linkedin.com/in/parthshroff/"
+        ],
+        "knowsAbout": [
+          "Machine learning systems",
+          "Multimodal token compression",
+          "Diffusion language models",
+          "Distributed training",
+          "Relational deep learning",
+          "Computer architecture",
+          "Hardware-software co-design"
+        ]
       }
-  </script>
-    <title>Parth Shroff | UT Austin</title>
+    </script>
   </head>
-  <body class="sign">
-    <div class="jumbotron text-left">
-      <div class = "row">
-      <div class="span3 rightPadding">
-        <img src="images/Photo Modified.jpg" vspace="0" style="width:200px;">
-      </div>
-      <div class="col-sm-8">
-        <h1>Parth Shroff</h1>
-        <li> <a href="https://www.cs.utexas.edu/turing-scholars">Turing Scholar</a> & <a href="https://cns.utexas.edu/honors/honors-programs-center/deans-scholars">Dean's Scholar</a></li>
-         <li>Undergraduate Student
-          of <a href="http://www.cs.utexas.edu/">Computer Science Honors</a>
-          and <a href="https://www.ece.utexas.edu/">Electrical & Computer Engineering </a>
-          and <a href="http://www.ma.utexas.edu/">Mathematics</a>
-          at <a href="http://www.utexas.edu">UT Austin</a>
-        </li>
-        <li>Class of 2024</li>
-        <li>Current Research Supervisor: Dr. Calvin Lin</a></li>
-        <li>Email: parth <font face="courier">dot</font> shroff <font face="courier">at</font> utexas <font face="courier">dot</font> edu</li>
-        <li>Research Interests: Prediction Mechanisms in Computer Architecture; Hardware Accelerator Design
-         </li>	  
-      </div>
-    </div>
 
-    </div>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <div class = "row">
-      <div class = "col-sm-1"></div>
-      <div class="col-sm-10">
-      <div class="card">
-        <div class="card-header">
-          <h3>Bio</h3>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="wordmark" href="#top" aria-label="PS - Parth Shroff, home">PS</a>
+        <div class="nav-links">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#background">Background</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div class="card-body">
-          <p class="card-text">
-           <p>I am a junior at UT Austin majoring in CS (Turing & Dean's), ECE, and Math. I graduated from the Liberal Arts and Science Academy High School. </p>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="intro" id="top" aria-labelledby="intro-title">
+        <div class="intro-photo-wrap">
+          <picture>
+            <source srcset="images/parth-shroff-profile.avif" type="image/avif">
+            <img
+              class="intro-photo"
+              src="images/parth-shroff-profile.jpg"
+              alt="Portrait of Parth Shroff"
+              width="600"
+              height="800"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </picture>
         </div>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class = "row">
-    <div class = "col-sm-1"></div>
-    <div class="col-sm-10">
-    <div class="card">
-      <div class="card-header">
-        <h3>Research</h3>
-      </div>
-      <div class="card-body">
-         <p> My main research interest is in prediction mechanisms for cache replacement policies and prefetching. I am also interested in the development of 
-          semiconductor memory technologies and hardware accelerators for machine learning and high performance computing. </p>
-      </div>
-    </div>
-  </div>
-</div>
-  <br />
-  
-  <div class = "row">
-    <div class = "col-sm-1"></div>
-    <div class="col-sm-10">
-    <div class="card">
-      <div class="card-header">
-        <h3>Publications</h3>
-      </div>
-      <div class="card-body">
-        <ul> 
-        <li> Jacob Rohan, Parth Shroff, and Jaydeep P. Kulkarni, “Machine Learning Techniques for Improved Non-Ideal Non-Volatile Memory Modeling” Government Microelectronic Conference (GOMACTech), March 2022 </li>
-        <li> B. R. La Cour, M. Maynard, P. Shroff, G. Ko, and E. Ellis, "The Virtual Quantum Optics Laboratory," 2022 IEEE International Conference on Quantum Computing and Engineering (QCE), 2022, pp. 677-687, doi:10.1109/QCE53715.2022.00091</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
+        <div class="intro-copy">
+          <p class="eyebrow">Machine learning systems + architecture</p>
+          <h1 id="intro-title">Parth Shroff</h1>
+          <p class="intro-lede">
+            I work on efficient machine learning systems, spanning model architecture,
+            distributed execution, and hardware-software co-design.
+          </p>
+          <p class="intro-body">
+            I completed an M.S. at Stanford and three bachelor's degrees at UT Austin.
+            My research spans multimodal token compression with
+            <a href="https://tambelab.stanford.edu/" target="_blank" rel="noreferrer">Thierry Tambe</a>,
+            relational learning with
+            <a href="https://cs.stanford.edu/people/jure/" target="_blank" rel="noreferrer">Jure Leskovec</a>,
+            and efficient diffusion language models. I currently work at NVIDIA.
+          </p>
 
-<br />
-  
-<div class = "row">
-  <div class = "col-sm-1"></div>
-  <div class="col-sm-10">
-  <div class="card">
-    <div class="card-header">
-      <h3>Teaching Assistance (TA) Experience</h3>
-    </div>
-    <div class="card-body">
-      <ul> 
-      <li> Fall 2022 - Digital Logic Design (ECE 316) - Professor Jaydeep Kulkarni & Professor Al Cuevas</li>
-      <li> Spring 2023 - Digital Logic Design (ECE 316) - Professor Michael Orshansky & Professor Nina Telang</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</div>
+          <nav class="profile-links" aria-label="Profile links">
+            <a href="mailto:pshroff@cs.stanford.edu">Email</a>
+            <a href="https://scholar.google.com/citations?user=zU3lUtAAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://github.com/ParthShroff" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/parthshroff/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </nav>
+        </div>
+      </section>
 
-  <br />
-  <br />
-  <br />
+      <section class="news-strip" aria-labelledby="news-title">
+        <h2 id="news-title">Recent</h2>
+        <ol class="news-list">
+          <li>
+            <time datetime="2026-07">Jul 2026</time>
+            <span>Released our work on cacheable Mamba-attention hybrids for block diffusion language models.</span>
+          </li>
+          <li>
+            <time datetime="2026-04">Apr 2026</time>
+            <span>RelBench v2 appeared at the ICLR DATA-FM Workshop.</span>
+          </li>
+          <li>
+            <time datetime="2025-06">Jun 2025</time>
+            <span>Presented token sequence compression at the CVPR eLVM Workshop.</span>
+          </li>
+        </ol>
+      </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src = "bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+      <section class="content-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <p class="section-index">01</p>
+          <div>
+            <h2 id="research-title">Research</h2>
+            <p>Selected threads across efficient models and systems.</p>
+          </div>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-item">
+            <p class="research-number">A</p>
+            <h3>Multimodal token compression</h3>
+            <p>
+              With the Tambe Lab and NVIDIA Research, I studied visual-token redundancy
+              in vision-language models. Our CVPR 2025 eLVM work finds that simple cluster
+              aggregation can outperform prior selection and merging methods; follow-on
+              work achieved 50&ndash;75% embedding compression with minimal accuracy loss.
+            </p>
+            <p class="research-meta">Thierry Tambe &middot; Tsachy Weissman &middot; NVIDIA Research</p>
+          </article>
+
+          <article class="research-item">
+            <p class="research-number">B</p>
+            <h3>Relational learning at scale</h3>
+            <p>
+              I contributed dataset integrations and evaluation infrastructure to RelBench
+              v2, an open benchmark for learning over relational databases. The release
+              spans 11 databases and 66 predictive tasks.
+            </p>
+            <p class="research-meta">Jure Leskovec &middot; Carlos Guestrin &middot; Stanford</p>
+          </article>
+
+          <article class="research-item">
+            <p class="research-number">C</p>
+            <h3>Block-parallel diffusion training</h3>
+            <p>
+              I helped develop and validate Block Parallelism, which assigns independent
+              denoising blocks to GPUs, keeps corrupted state local, and shards shared clean
+              context. On 16 H200s, fused BP+CP reaches 1.19&times; speedup on Nemotron 14B at
+              512K and 1.78&times; on DiffusionGemma 26B-A4B at 128K.
+            </p>
+            <p class="research-meta">Distributed training &middot; Long context &middot; Diffusion LLMs</p>
+          </article>
+
+          <article class="research-item">
+            <p class="research-number">D</p>
+            <h3>Hybrid diffusion language models</h3>
+            <p>
+              Our partial-bidirectional Mamba-attention hybrid confines reverse computation
+              to the active denoising block, enabling exact clean-prefix cache reuse while
+              retaining local bidirectional mixing.
+            </p>
+            <p class="research-meta">Model architecture &middot; Prefix caching &middot; Long-context inference</p>
+          </article>
+
+          <article class="research-item">
+            <p class="research-number">E</p>
+            <h3>Efficient model memory systems</h3>
+            <p>
+              At AMD, I developed head-level low-precision K/V-cache compression for MoE
+              models. At NVIDIA, I characterized GPU memory-management and cache behavior
+              across AI, graphics, and HPC workloads.
+            </p>
+            <p class="research-meta">Quantization &middot; K/V caches &middot; GPU architecture</p>
+          </article>
+
+          <article class="research-item">
+            <p class="research-number">F</p>
+            <h3>Multilevel cache replacement</h3>
+            <p>
+              My UT Austin honors thesis, advised by Calvin Lin, developed multilevel-aware
+              cache replacement policies and evaluated them in ChampSim against classical
+              and oracle-inspired baselines.
+            </p>
+            <p class="research-meta">Calvin Lin &middot; UT Austin &middot; Computer architecture</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="publications" aria-labelledby="publications-title">
+        <div class="section-heading">
+          <p class="section-index">02</p>
+          <div>
+            <h2 id="publications-title">Publications</h2>
+            <p>Selected papers. My name is shown in bold.</p>
+          </div>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication">
+            <div class="publication-year">2026</div>
+            <div class="publication-copy">
+              <h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>
+              <p class="authors">Pranshu Chaturvedi, Tarun Suresh, Hangoo Kang, <strong>Parth Shroff</strong>, Azalia Mirhoseini</p>
+              <p class="venue">Submitted to ICLR 2027</p>
+            </div>
+            <div class="publication-links">
+              <span>Preprint</span>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-year">2026</div>
+            <div class="publication-copy">
+              <h3>Training Hybrid Block Diffusion Language Models with Partial Bidirectionality</h3>
+              <p class="authors">Pranshu Chaturvedi, <strong>Parth Shroff</strong>, Tarun Suresh, Hangoo Kang, Kaiyue Wen</p>
+              <p class="venue">COLM '26 NonAR-LM Workshop &middot; Submitted to ICLR 2027</p>
+              <p class="author-position">Second author</p>
+            </div>
+            <div class="publication-links">
+              <a href="https://arxiv.org/abs/2607.02805" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-year">2026</div>
+            <div class="publication-copy">
+              <h3>RelBench v2: A Large-Scale Benchmark and Repository for Relational Data</h3>
+              <p class="authors">Justin Gu, Rishabh Ranjan, Charilaos Kanatsoulis, Haiming Tang, Martin Jurkovic, Valter Hudovernik, Mark Znidar, Pranshu Chaturvedi, <strong>Parth Shroff</strong>, Fengyu Li, Jure Leskovec</p>
+              <p class="venue">ICLR 2026 DATA-FM Workshop</p>
+            </div>
+            <div class="publication-links">
+              <a href="https://arxiv.org/abs/2602.12606" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://star-project.stanford.edu/relbench/" target="_blank" rel="noreferrer">Project</a>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-year">2025</div>
+            <div class="publication-copy">
+              <h3>Token Sequence Compression for Efficient Multimodal Computing</h3>
+              <p class="authors">Yasmine Omri*, <strong>Parth Shroff*</strong>, Thierry Tambe</p>
+              <p class="venue">CVPR 2025 Workshop on Efficient Large Vision Models</p>
+              <p class="author-position">Co-first author</p>
+            </div>
+            <div class="publication-links">
+              <a href="https://arxiv.org/abs/2504.17892" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-year">2022</div>
+            <div class="publication-copy">
+              <h3>The Virtual Quantum Optics Laboratory</h3>
+              <p class="authors">Brian R. La Cour, Maria Maynard, <strong>Parth Shroff</strong>, Gabriel Ko, Evan Ellis</p>
+              <p class="venue">IEEE International Conference on Quantum Computing and Engineering &middot; Best Paper</p>
+            </div>
+            <div class="publication-links">
+              <a href="https://arxiv.org/abs/2105.07300" target="_blank" rel="noreferrer">Paper</a>
+              <a href="VQOL_poster%20-%202020.pdf">Poster</a>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-year">2022</div>
+            <div class="publication-copy">
+              <h3>Machine Learning Techniques for Improved Non-Ideal Non-Volatile Memory Modeling</h3>
+              <p class="authors">Jacob Rohan, <strong>Parth Shroff</strong>, Jaydeep P. Kulkarni</p>
+              <p class="venue">Government Microcircuit Applications and Critical Technology Conference (GOMACTech)</p>
+              <p class="author-position">Second author</p>
+            </div>
+            <div class="publication-links">
+              <span>Conference paper</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="all-publications">
+          <a href="https://scholar.google.com/citations?user=zU3lUtAAAAAJ" target="_blank" rel="noreferrer">View complete record on Google Scholar</a>
+        </p>
+      </section>
+
+      <section class="content-section" id="background" aria-labelledby="background-title">
+        <div class="section-heading">
+          <p class="section-index">03</p>
+          <div>
+            <h2 id="background-title">Background</h2>
+            <p>Education, selected experience, and teaching.</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-row">
+            <div class="timeline-date">2024&ndash;2026</div>
+            <div>
+              <h3>Stanford University</h3>
+              <p class="timeline-degree">M.S. in Electrical and Computer Engineering</p>
+              <p>AI and Software/Hardware Systems &middot; Research focus: Multimodal LLM inference &middot; GPA: 4.07/4.00</p>
+              <p>Advisors: Thierry Tambe, Mert Pilanci, and Tsachy Weissman</p>
+            </div>
+          </article>
+
+          <article class="timeline-row">
+            <div class="timeline-date">2020&ndash;2024</div>
+            <div>
+              <h3>The University of Texas at Austin</h3>
+              <p class="timeline-degree">B.S. Computer Science Honors &middot; B.S. Electrical and Computer Engineering &middot; B.S. Mathematics</p>
+              <p>Turing Scholars &middot; Dean's Scholars &middot; University Honors &middot; CNS Distinction in Research</p>
+            </div>
+          </article>
+
+          <h3 class="timeline-heading">Selected experience</h3>
+
+          <article class="timeline-row">
+            <div class="timeline-date">Fall 2025</div>
+            <div>
+              <h3>AMD</h3>
+              <p class="timeline-degree">Deep Learning Quantization Research Engineer Intern</p>
+              <p>Head-level low-precision K/V-cache compression for open-source mixture-of-experts models in Quark.</p>
+            </div>
+          </article>
+
+          <article class="timeline-row">
+            <div class="timeline-date">2024&ndash;2025</div>
+            <div>
+              <h3>NVIDIA</h3>
+              <p class="timeline-degree">GPU Design Architecture Intern</p>
+              <p>GPU MMU, cache, and memory-subsystem design for AI training and inference, graphics, and HPC workloads.</p>
+            </div>
+          </article>
+
+          <article class="timeline-row">
+            <div class="timeline-date">Summer 2023</div>
+            <div>
+              <h3>Apple</h3>
+              <p class="timeline-degree">CPU Design Verification Intern</p>
+              <p>Generated load/store and memory-subsystem test sequences for ARM-based Apple SoCs.</p>
+            </div>
+          </article>
+
+          <article class="timeline-row timeline-row-compact">
+            <div class="timeline-date">2022&ndash;2023</div>
+            <div>
+              <h3>Teaching Assistant, Digital Logic Design</h3>
+              <p>UT Austin ECE 316 &middot; Fall 2022 and Spring 2023</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <p class="section-index">04</p>
+        <div>
+          <h2 id="contact-title">Let's talk research.</h2>
+          <p>
+            I'm always interested in efficient model architectures, training and inference
+            systems, and hardware-software co-design.
+          </p>
+          <a class="contact-link" href="mailto:pshroff@cs.stanford.edu">pshroff@cs.stanford.edu</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Parth Shroff</p>
+      <p>Built as a lightweight static site.</p>
+    </footer>
   </body>
 </html>
