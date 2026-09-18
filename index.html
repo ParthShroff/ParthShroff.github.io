@@ -35,14 +35,15 @@
         ],
         "sameAs": [
           "https://scholar.google.com/citations?user=zU3lUtAAAAAJ",
-          "https://github.com/ParthShroff",
           "https://www.linkedin.com/in/parthshroff/"
         ],
         "knowsAbout": [
-          "Machine learning systems",
+          "Machine learning training and inference systems",
           "Multimodal token compression",
           "Diffusion language models",
-          "Distributed training",
+          "Distributed long-context training",
+          "K/V-cache optimization",
+          "Quantization",
           "Relational deep learning",
           "Computer architecture",
           "Hardware-software co-design"
@@ -58,7 +59,6 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a class="wordmark" href="#top" aria-label="PS - Parth Shroff, home">PS</a>
         <div class="nav-links">
-          <a href="#research">Research</a>
           <a href="#publications">Publications</a>
           <a href="#background">Background</a>
           <a href="#contact">Contact</a>
@@ -91,18 +91,24 @@
             distributed execution, and hardware-software co-design.
           </p>
           <p class="intro-body">
-            I completed an M.S. at Stanford and three bachelor's degrees at UT Austin.
-            My research spans multimodal token compression with
-            <a href="https://tambelab.stanford.edu/" target="_blank" rel="noreferrer">Thierry Tambe</a>,
-            relational learning with
-            <a href="https://cs.stanford.edu/people/jure/" target="_blank" rel="noreferrer">Jure Leskovec</a>,
-            and efficient diffusion language models. I currently work at NVIDIA.
+            I completed an M.S. in Electrical &amp; Computer Engineering (AI &amp;
+            Software/Hardware Systems) at Stanford, where my research focused on
+            multimodal LLM inference. At UT Austin, I earned B.S. degrees in Computer
+            Science, Electrical and Computer Engineering, and Mathematics as a
+            Turing Scholar and Dean's Scholar, graduating with University Honors and
+            CNS Distinction in Research.
+          </p>
+          <p class="intro-body intro-research">
+            My research spans efficient model training and inference, distributed and
+            long-context training, diffusion language models, multimodal token compression,
+            relational deep learning, quantization, K/V-cache optimization, GPU memory
+            systems, computer architecture, and hardware-software co-design. I currently
+            work at NVIDIA.
           </p>
 
           <nav class="profile-links" aria-label="Profile links">
             <a href="mailto:pshroff@cs.stanford.edu">Email</a>
             <a href="https://scholar.google.com/citations?user=zU3lUtAAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
-            <a href="https://github.com/ParthShroff" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/parthshroff/" target="_blank" rel="noreferrer">LinkedIn</a>
           </nav>
         </div>
@@ -112,8 +118,8 @@
         <h2 id="news-title">Recent</h2>
         <ol class="news-list">
           <li>
-            <time datetime="2026-07">Jul 2026</time>
-            <span>Released our work on cacheable Mamba-attention hybrids for block diffusion language models.</span>
+            <time datetime="2026-09">Sep 2026</time>
+            <span>Released our work on Block Parallelism for efficient distributed long-context diffusion language model training.</span>
           </li>
           <li>
             <time datetime="2026-04">Apr 2026</time>
@@ -126,89 +132,9 @@
         </ol>
       </section>
 
-      <section class="content-section" id="research" aria-labelledby="research-title">
-        <div class="section-heading">
-          <p class="section-index">01</p>
-          <div>
-            <h2 id="research-title">Research</h2>
-            <p>Selected threads across efficient models and systems.</p>
-          </div>
-        </div>
-
-        <div class="research-grid">
-          <article class="research-item">
-            <p class="research-number">A</p>
-            <h3>Multimodal token compression</h3>
-            <p>
-              With the Tambe Lab and NVIDIA Research, I studied visual-token redundancy
-              in vision-language models. Our CVPR 2025 eLVM work finds that simple cluster
-              aggregation can outperform prior selection and merging methods; follow-on
-              work achieved 50&ndash;75% embedding compression with minimal accuracy loss.
-            </p>
-            <p class="research-meta">Thierry Tambe &middot; Tsachy Weissman &middot; NVIDIA Research</p>
-          </article>
-
-          <article class="research-item">
-            <p class="research-number">B</p>
-            <h3>Relational learning at scale</h3>
-            <p>
-              I contributed dataset integrations and evaluation infrastructure to RelBench
-              v2, an open benchmark for learning over relational databases. The release
-              spans 11 databases and 66 predictive tasks.
-            </p>
-            <p class="research-meta">Jure Leskovec &middot; Carlos Guestrin &middot; Stanford</p>
-          </article>
-
-          <article class="research-item">
-            <p class="research-number">C</p>
-            <h3>Block-parallel diffusion training</h3>
-            <p>
-              I helped develop and validate Block Parallelism, which assigns independent
-              denoising blocks to GPUs, keeps corrupted state local, and shards shared clean
-              context. On 16 H200s, fused BP+CP reaches 1.19&times; speedup on Nemotron 14B at
-              512K and 1.78&times; on DiffusionGemma 26B-A4B at 128K.
-            </p>
-            <p class="research-meta">Distributed training &middot; Long context &middot; Diffusion LLMs</p>
-          </article>
-
-          <article class="research-item">
-            <p class="research-number">D</p>
-            <h3>Hybrid diffusion language models</h3>
-            <p>
-              Our partial-bidirectional Mamba-attention hybrid confines reverse computation
-              to the active denoising block, enabling exact clean-prefix cache reuse while
-              retaining local bidirectional mixing.
-            </p>
-            <p class="research-meta">Model architecture &middot; Prefix caching &middot; Long-context inference</p>
-          </article>
-
-          <article class="research-item">
-            <p class="research-number">E</p>
-            <h3>Efficient model memory systems</h3>
-            <p>
-              At AMD, I developed head-level low-precision K/V-cache compression for MoE
-              models. At NVIDIA, I characterized GPU memory-management and cache behavior
-              across AI, graphics, and HPC workloads.
-            </p>
-            <p class="research-meta">Quantization &middot; K/V caches &middot; GPU architecture</p>
-          </article>
-
-          <article class="research-item">
-            <p class="research-number">F</p>
-            <h3>Multilevel cache replacement</h3>
-            <p>
-              My UT Austin honors thesis, advised by Calvin Lin, developed multilevel-aware
-              cache replacement policies and evaluated them in ChampSim against classical
-              and oracle-inspired baselines.
-            </p>
-            <p class="research-meta">Calvin Lin &middot; UT Austin &middot; Computer architecture</p>
-          </article>
-        </div>
-      </section>
-
       <section class="content-section" id="publications" aria-labelledby="publications-title">
         <div class="section-heading">
-          <p class="section-index">02</p>
+          <p class="section-index">01</p>
           <div>
             <h2 id="publications-title">Publications</h2>
             <p>Selected papers. My name is shown in bold.</p>
@@ -220,11 +146,12 @@
             <div class="publication-year">2026</div>
             <div class="publication-copy">
               <h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>
-              <p class="authors">Pranshu Chaturvedi, Tarun Suresh, Hangoo Kang, <strong>Parth Shroff</strong>, Azalia Mirhoseini</p>
+              <p class="authors">Tarun Suresh*, Pranshu Chaturvedi*, Hangoo Kang*, <strong>Parth Shroff</strong>, Ishan S. Khare, Hermann Kumbong, Azalia Mirhoseini</p>
               <p class="venue">Submitted to ICLR 2027</p>
+              <p class="author-position">After three co-first authors</p>
             </div>
             <div class="publication-links">
-              <span>Preprint</span>
+              <a href="https://arxiv.org/abs/2609.19242" target="_blank" rel="noreferrer">Paper</a>
             </div>
           </article>
 
@@ -301,7 +228,7 @@
 
       <section class="content-section" id="background" aria-labelledby="background-title">
         <div class="section-heading">
-          <p class="section-index">03</p>
+          <p class="section-index">02</p>
           <div>
             <h2 id="background-title">Background</h2>
             <p>Education, selected experience, and teaching.</p>
@@ -323,8 +250,8 @@
             <div class="timeline-date">2020&ndash;2024</div>
             <div>
               <h3>The University of Texas at Austin</h3>
-              <p class="timeline-degree">B.S. Computer Science Honors &middot; B.S. Electrical and Computer Engineering &middot; B.S. Mathematics</p>
-              <p>Turing Scholars &middot; Dean's Scholars &middot; University Honors &middot; CNS Distinction in Research</p>
+              <p class="timeline-degree">B.S. in Computer Science &middot; B.S. in Electrical and Computer Engineering &middot; B.S. in Mathematics</p>
+              <p>Turing Scholars Honors Program &middot; Dean's Scholars Honors Program &middot; University Honors &middot; CNS Distinction in Research</p>
             </div>
           </article>
 
@@ -368,7 +295,7 @@
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <p class="section-index">04</p>
+        <p class="section-index">03</p>
         <div>
           <h2 id="contact-title">Let's talk research.</h2>
           <p>
