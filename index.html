@@ -91,14 +91,12 @@
             distributed execution, and hardware-software co-design.
           </p>
           <p class="intro-body">
-            I completed an M.S. in Electrical and Computer Engineering at Stanford
-            University and three bachelor's degrees at UT Austin. My recent research
-            includes multimodal token compression with
+            I completed an M.S. at Stanford and three bachelor's degrees at UT Austin.
+            My research spans multimodal token compression with
             <a href="https://tambelab.stanford.edu/" target="_blank" rel="noreferrer">Thierry Tambe</a>,
             relational learning with
             <a href="https://cs.stanford.edu/people/jure/" target="_blank" rel="noreferrer">Jure Leskovec</a>,
-            and architectures and distributed systems for diffusion language models. I
-            currently work at NVIDIA.
+            and efficient diffusion language models. I currently work at NVIDIA.
           </p>
 
           <nav class="profile-links" aria-label="Profile links">
@@ -142,16 +140,10 @@
             <p class="research-number">A</p>
             <h3>Multimodal token compression</h3>
             <p>
-              With the Tambe Lab and NVIDIA Research, I studied how redundant visual
-              tokens inflate vision-language model inference cost. Our CVPR 2025 eLVM
-              work systematically compares token selection, merging, and cluster-level
-              aggregation, showing that simple cluster aggregation can outperform prior
-              encoder-level and attention-based approaches.
-            </p>
-            <p>
-              I also explored Matryoshka-style variable-length CLIP embeddings and Visual
-              Attention Redistribution, achieving 50&ndash;75% embedding compression with
-              minimal accuracy loss across SQA-IMG, TextVQA, POPE, and MME.
+              With the Tambe Lab and NVIDIA Research, I studied visual-token redundancy
+              in vision-language models. Our CVPR 2025 eLVM work finds that simple cluster
+              aggregation can outperform prior selection and merging methods; follow-on
+              work achieved 50&ndash;75% embedding compression with minimal accuracy loss.
             </p>
             <p class="research-meta">Thierry Tambe &middot; Tsachy Weissman &middot; NVIDIA Research</p>
           </article>
@@ -160,11 +152,9 @@
             <p class="research-number">B</p>
             <h3>Relational learning at scale</h3>
             <p>
-              I contributed to RelBench v2, a benchmark and open-source repository for
-              learning directly over interconnected relational tables. I worked on dataset
-              integrations spanning TGB and TabArena sources, as well as unified loading and
-              evaluation infrastructure; RelBench v2 expands the benchmark to 11 databases
-              and 66 predictive tasks.
+              I contributed dataset integrations and evaluation infrastructure to RelBench
+              v2, an open benchmark for learning over relational databases. The release
+              spans 11 databases and 66 predictive tasks.
             </p>
             <p class="research-meta">Jure Leskovec &middot; Carlos Guestrin &middot; Stanford</p>
           </article>
@@ -173,15 +163,10 @@
             <p class="research-number">C</p>
             <h3>Block-parallel diffusion training</h3>
             <p>
-              I helped develop and validate Block Parallelism, a distributed training method
-              for long-context block diffusion models. It assigns independent target-block
-              losses to GPU ranks and fuses block and context parallelism so corrupted-block
-              state stays local while clean-prefix key/value state is sharded.
-            </p>
-            <p>
-              The system combines K/V-sharded attention, tiled cross-entropy, and DP-scoped
-              ZeRO-2. In 16-H200 profiles, BP+CP speedups grow with context length, reaching
-              1.19&times; on Nemotron 14B at 512K and 1.78&times; on DiffusionGemma 26B-A4B at 128K.
+              I helped develop and validate Block Parallelism, which assigns independent
+              denoising blocks to GPUs, keeps corrupted state local, and shards shared clean
+              context. On 16 H200s, fused BP+CP reaches 1.19&times; speedup on Nemotron 14B at
+              512K and 1.78&times; on DiffusionGemma 26B-A4B at 128K.
             </p>
             <p class="research-meta">Distributed training &middot; Long context &middot; Diffusion LLMs</p>
           </article>
@@ -190,10 +175,9 @@
             <p class="research-number">D</p>
             <h3>Hybrid diffusion language models</h3>
             <p>
-              I study Mamba-attention hybrids for block diffusion language modeling. Our
-              partial-bidirectional design restricts reverse Mamba computation to the active
-              denoising block, retaining local bidirectional mixing while making clean-prefix
-              states exactly reusable across denoising steps.
+              Our partial-bidirectional Mamba-attention hybrid confines reverse computation
+              to the active denoising block, enabling exact clean-prefix cache reuse while
+              retaining local bidirectional mixing.
             </p>
             <p class="research-meta">Model architecture &middot; Prefix caching &middot; Long-context inference</p>
           </article>
@@ -202,10 +186,9 @@
             <p class="research-number">E</p>
             <h3>Efficient model memory systems</h3>
             <p>
-              At AMD, I developed head-level low-precision K/V-cache compression for
-              open-source mixture-of-experts models, including GPT-OSS, Qwen, and DeepSeek.
-              At NVIDIA, I characterized GPU memory-management and cache behavior across
-              machine learning, graphics, and HPC workloads.
+              At AMD, I developed head-level low-precision K/V-cache compression for MoE
+              models. At NVIDIA, I characterized GPU memory-management and cache behavior
+              across AI, graphics, and HPC workloads.
             </p>
             <p class="research-meta">Quantization &middot; K/V caches &middot; GPU architecture</p>
           </article>
@@ -214,9 +197,9 @@
             <p class="research-number">F</p>
             <h3>Multilevel cache replacement</h3>
             <p>
-              My UT Austin honors thesis, advised by Calvin Lin, studied coordinated cache
-              replacement across multiple hierarchy levels. I implemented and evaluated
-              replacement policies in ChampSim against classical and oracle-inspired baselines.
+              My UT Austin honors thesis, advised by Calvin Lin, developed multilevel-aware
+              cache replacement policies and evaluated them in ChampSim against classical
+              and oracle-inspired baselines.
             </p>
             <p class="research-meta">Calvin Lin &middot; UT Austin &middot; Computer architecture</p>
           </article>
@@ -238,7 +221,7 @@
             <div class="publication-copy">
               <h3>Block Parallelism for Efficient Distributed Long-Context Diffusion Language Model Training</h3>
               <p class="authors">Pranshu Chaturvedi, Tarun Suresh, Hangoo Kang, <strong>Parth Shroff</strong>, Azalia Mirhoseini</p>
-              <p class="venue">Preprint</p>
+              <p class="venue">Submitted to ICLR 2027</p>
             </div>
             <div class="publication-links">
               <span>Preprint</span>
@@ -250,7 +233,8 @@
             <div class="publication-copy">
               <h3>Training Hybrid Block Diffusion Language Models with Partial Bidirectionality</h3>
               <p class="authors">Pranshu Chaturvedi, <strong>Parth Shroff</strong>, Tarun Suresh, Hangoo Kang, Kaiyue Wen</p>
-              <p class="venue">COLM 2026 Workshop on Non-Autoregressive Language Models</p>
+              <p class="venue">COLM '26 NonAR-LM Workshop &middot; Submitted to ICLR 2027</p>
+              <p class="author-position">Second author</p>
             </div>
             <div class="publication-links">
               <a href="https://arxiv.org/abs/2607.02805" target="_blank" rel="noreferrer">Paper</a>
@@ -275,7 +259,8 @@
             <div class="publication-copy">
               <h3>Token Sequence Compression for Efficient Multimodal Computing</h3>
               <p class="authors">Yasmine Omri*, <strong>Parth Shroff*</strong>, Thierry Tambe</p>
-              <p class="venue">CVPR 2025 Workshop on Efficient Large Vision Models &middot; *Equal contribution</p>
+              <p class="venue">CVPR 2025 Workshop on Efficient Large Vision Models</p>
+              <p class="author-position">Co-first author</p>
             </div>
             <div class="publication-links">
               <a href="https://arxiv.org/abs/2504.17892" target="_blank" rel="noreferrer">Paper</a>
@@ -301,6 +286,7 @@
               <h3>Machine Learning Techniques for Improved Non-Ideal Non-Volatile Memory Modeling</h3>
               <p class="authors">Jacob Rohan, <strong>Parth Shroff</strong>, Jaydeep P. Kulkarni</p>
               <p class="venue">Government Microcircuit Applications and Critical Technology Conference (GOMACTech)</p>
+              <p class="author-position">Second author</p>
             </div>
             <div class="publication-links">
               <span>Conference paper</span>
